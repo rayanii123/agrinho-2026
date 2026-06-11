@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tag obrigatória do concurso -->
+    <meta name="keywords" content="agrinho, sustentabilidade, agro, ananas">
+    <title>Ananas Synergy - Agro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com Menu de Navegação -->
+    <header>
+        <div class="logo">
+            🍍 Ananas Synergy
+        </div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">O Projeto</a>
+            <a href="#calculadora">Simulador</a>
+            <button id="btn-tema" class="btn-secundario">🌓 Modo Escuro</button>
+        </nav>
+    </header>
+
+    <!-- Seção Principal (Hero) -->
+    <section id="inicio" class="hero">
+        <div class="hero-conteudo">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>Equilíbrio perfeito entre a produção de alta escala e o respeito ao meio ambiente.</p>
+            <a href="#calculadora" class="btn-principal">Testar Simulador</a>
+        </div>
+    </section>
+
+    <!-- Seção de Conteúdo e Contexto -->
+    <section id="sobre" class="container">
+        <h2>O Ciclo Inteligente do Abacaxi</h2>
+        <p>Nossa plataforma mapeia o ciclo completo da agricultura da fruta. Unimos tecnologia e cuidado com a terra para evitar o desperdício de água e reduzir o uso de químicos agressivos.</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <h3>🌱 Solo Vivo</h3>
+                <p>Preparo orgânico da terra protegendo os nutrientes naturais do solo.</p>
+            </div>
+            <div class="card">
+                <h3>💧 Gota Certa</h3>
+                <p>Irrigação inteligente direto na raiz, gastando apenas o necessário.</p>
+            </div>
+            <div class="card">
+                <h3>📈 Escala Verde</h3>
+                <p>Processamento de fábrica que reaproveita as cascas para adubo natural.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Interativa com Manipulação do DOM via JS -->
+    <section id="calculadora" class="bg-alternativo">
+        <div class="container">
+            <h2>Simulador de Economia Sustentável</h2>
+            <p>Descubra quanta água uma fazenda pode economizar usando nosso manejo inteligente.</p>
+            
+            <div class="formulario">
+                <div class="campo">
+                    <label for="input-hectares">Tamanho da plantação (em hectares):</label>
+                    <input type="number" id="input-hectares" placeholder="Ex: 5" min="1">
+                </div>
+                <button id="btn-calcular" class="btn-principal">Calcular Economia</button>
+            </div>
+
+            <!-- Caixa de resposta que muda via JavaScript -->
+            <div id="resultado-caixa" class="resultado oculto">
+                <h3>Resultado para a Fazenda de <span id="res-nome">X</span> hectares:</h3>
+                <p>💧 **Água poupada:** <span id="res-agua">0</span> litros por ano.</p>
+                <p>🐝 **Preservação:** Seu manejo protege a fauna local e garante solo fértil!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé com Créditos de Autoria -->
+    <footer>
+        <p>&copy; 2026 Ananas Synergy. Conteúdo 100% autoral desenvolvido para o Projeto Agrinho.</p>
+        <p>Feito com amor e foco no futuro do nosso planeta.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+/* Configurações Gerais e Cores Base */
+:root {
+    --cor-principal: #2e7d32; /* Verde Agro */
+    --cor-secundaria: #f9a825; /* Amarelo Abacaxi */
+    --cor-fundo: #ffffff;
+    --cor-texto: #333333;
+    --cor-suave: #f4f6f4;
+    --transicao: all 0.3s ease;
+}
+
+/* Variáveis para o Modo Escuro */
+.modo-escuro {
+    --cor-fundo: #121212;
+    --cor-texto: #f5f5f5;
+    --cor-suave: #1e1e1e;
+    --cor-principal: #4caf50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: var(--transicao);
+    line-height: 1.6;
+}
+
+.container {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Menu de Navegação Flexbox */
+header {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    transition: var(--transicao);
+}
+
+header nav a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Seção de Destaque (Hero) */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Botões com Efeito Hover */
+.btn-principal {
+    background-color: var(--cor-secundaria);
+    color: #333;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transicao);
+}
+
+.btn-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-secundario {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.btn-secundario:hover {
+    background-color: white;
+    color: var(--cor-principal);
+}
+
+/* Grid Responsivo para os Cards */
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--cor-suave);
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1 1 300px;
+    max-width: 340px;
+    transition: var(--transicao);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo da área interativa */
+.bg-alternativo {
+    background-color: var(--cor-suave);
+}
+
+.formulario {
+    margin: 30px 0;
+}
+
+.campo input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 150px;
+}
+
+.resultado {
+    background-color: var(--cor-fundo);
+    padding: 20px;
+    border-left: 5px solid var(--cor-principal);
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.oculto {
+    display: none;
+}
+
+footer {
+    background-color: #222;
+    color: #bbb;
+    padding: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsividade para Telas Menores (Celulares) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .campo input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
